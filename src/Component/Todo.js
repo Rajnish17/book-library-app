@@ -6,7 +6,7 @@ const Todo = () => {
   const [show, setShow] = useState([]);
 
   const handleclick = () => {
-    if(input == ""){
+    if(input === ""){
      alert("please fill ")
     }else{
       setShow([...show, input]);
@@ -15,11 +15,17 @@ const Todo = () => {
   };
 
   const handleDelete =(i)=> {
-      const removeItem = show.filter((e,id) => {
-        return i !== id;
-      });
-      setShow(removeItem);
-    }
+    let text = window.confirm("do you want to delete");
+    if(text === true) {
+    const removeItem = show.filter((e,id) => {
+      return i !== id;
+    });
+    setShow(removeItem);
+  }else {
+    console.log(text)
+  };
+      
+    };
 
 
   return (
@@ -40,6 +46,7 @@ const Todo = () => {
           <tr>
             <th scope="col">id</th>
             <th scope="col">Todo Name</th>
+            
             <th scope="col">Delete</th>
           </tr>
         </thead>
