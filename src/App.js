@@ -1,10 +1,12 @@
 import React from 'react';
-import Todo from "./Component/Todo"
+import Nav from "./Component/Nav"
+import Book from "./Component/Book"
 import './App.css';
 function App() {
   return (
    <div>
-    <Todo/>
+    <Nav/>
+    <Book/>
    </div>
   );
 }

@@ -1,0 +1,14 @@
+.container{
+   max-width: 1300px;
+  
+  }
+  .box{
+    display: flex;
+    justify-content: center;
+    
+    
+  }
+
+  .form-control{
+    width: 500px;
+  }
